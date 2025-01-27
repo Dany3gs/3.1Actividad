@@ -16,4 +16,7 @@ Utiliza un Array.
 -> clase Prueba que cree un bloc de Notas de ejemplo y pruebe las operaciones que soporta.
 */
 public class Main {
+    public static void main(String[] args) {
+
+    }
 }

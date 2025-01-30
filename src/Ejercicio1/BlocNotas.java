@@ -21,7 +21,6 @@ public class BlocNotas {
 	}
 	
 	public void listarNotas() {
-		// TODO falta sumar NotaAlarma
 		for (int i = 0; i < indice; i++) {
 			System.out.println(notas[i]);
 		}

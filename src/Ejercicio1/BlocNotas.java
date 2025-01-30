@@ -3,43 +3,45 @@ package Ejercicio1;
 import java.util.Arrays;
 
 public class BlocNotas {
-    private Nota[] notas;
-
-    public BlocNotas(Nota[] notas) {
-        this.notas = notas;
-    }
-
-    public Nota[] getNotas() {
-        return notas;
-    }
-
-    public void setNotas(Nota[] notas) {
-        this.notas = notas;
-    }
-
-    @Override
-    public String toString() {
-        return "BlocNotas{" +
-                "notas=" + Arrays.toString(notas) +
-                '}';
-    }
-
-    public String introducirNota() {
-        return "Nota: " + Arrays.toString(notas);
-    }
-
-    public void listarNotas(){
-        for(Nota nota : notas){
-            System.out.println(nota);
-        }
-    }
-    public int eliminarNota(){
-        int posicion = notas.length - 1;
-        notas[posicion] = null;
-        return posicion;
-    }
-
-    public int cantidadNotas(){
-        return notas.length;
-    }
+	private Nota[] notas;
+	private int indice = 0;
+	
+	public BlocNotas(int capacidad) {
+		this.notas = new Nota[capacidad];
+	}
+	
+	public void introducirNota(Nota nota) {
+		if (indice < notas.length) {
+			notas[indice] = nota;
+			indice++;
+		} else {
+			// Manejar el caso en que el array está lleno
+			System.out.println("El bloc de notas está lleno.");
+		}
+	}
+	
+	public void listarNotas() {
+		// TODO falta sumar NotaAlarma
+		for (int i = 0; i < indice; i++) {
+			System.out.println(notas[i]);
+		}
+	}
+	
+	public void eliminarNota(int posicion) {
+		if (posicion >= 0 && posicion < indice) {
+			// Desplazar las notas hacia la izquierda
+			for (int i = posicion; i < indice - 1; i++) {
+				notas[i] = notas[i + 1];
+			}
+			// Poner null en la última posición para evitar referencias a objetos eliminados
+			notas[indice - 1] = null;
+			indice--; // Decrementar el índice
+		} else {
+			System.out.println("Posición inválida.");
+		}
+	}
+	
+	public int cantidadNotas() {
+		return indice;
+	}
 }

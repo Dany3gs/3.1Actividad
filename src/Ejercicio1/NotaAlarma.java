@@ -21,8 +21,7 @@ public class NotaAlarma extends Nota{
         return "Nota{" +
                 "nota=" + getNota() +
                 ", texto='" + getTexto() + '\'' +
-                "NotaAlarma{" +
-                "horaAlarma='" + horaAlarma + '\'' +
+                ", horaAlarma='" + horaAlarma + '\'' +
                 '}';
     }
 }

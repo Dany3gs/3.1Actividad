@@ -22,13 +22,15 @@ public class Prueba {
         
       
         BlocNotas bloc = new BlocNotas(10);
-        
+
+        // Una forma de añadir notas
+        // -------------------------------------------//
         Nota nota1 = new Nota(1, "Nota 1");
         Nota nota2 = new Nota(2, "Nota 2");
-        
         bloc.introducirNota(nota1);
         bloc.introducirNota(nota2);
-        
+        // -------------------------------------------//
+
         //Listamos todas las notas
         System.out.println("-----Listamos notas---------");
         bloc.listarNotas();
@@ -45,12 +47,16 @@ public class Prueba {
         
         // Añadimos notas
         System.out.println("-------Añadimos nuevas notas 3, 4 y 5, listamos--------");
+
+        // Otra forma de añadir notas es en la misma llamada al método crear la nota como parámetro
+        // -------------------------------------------//
         bloc.introducirNota(new Nota(3, "Nota 3"));
         bloc.introducirNota(new Nota(4, "Nota 4"));
         bloc.introducirNota(new Nota(5, "Nota 5"));
         bloc.listarNotas();
-        System.out.println("---------------");
+        // -------------------------------------------//
 
+        System.out.println("---------------");
         System.out.println("");
 
         System.out.println("-------Añadimos nota de alarma y listamos--------");
@@ -62,7 +68,6 @@ public class Prueba {
         bloc.listarNotas();
         
         System.out.println("---------------");
-        
         System.out.println("");
         
         System.out.println("-------Cantidad final de notas--------");

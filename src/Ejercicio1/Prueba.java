@@ -63,6 +63,19 @@ public class Prueba {
         NotaAlarma notaConAlarma = new NotaAlarma(6, "Esto es una alarma", "12:50h");
         bloc.introducirNota(notaConAlarma);
 
+        bloc.listarNotas();
+
+        System.out.println("---------------");
+        System.out.println("");
+
+        System.out.println("-------Eliminamos nota 5 y listamos--------");
+        bloc.eliminarNota(5); // tiene que dar Posición invalida
+
+        System.out.println("---------------");
+        System.out.println("");
+
+        System.out.println("-------Eliminamos nota 3 (la 5) y listamos--------");
+        bloc.eliminarNota(3);
 
         // listamos cambios
         bloc.listarNotas();

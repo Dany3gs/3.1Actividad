@@ -6,11 +6,27 @@ public class Pelicula {
     private String director;
     private float precio;
 
-    public Pelicula(String director, float precio, String protagonista, String titulo) {
+    public Pelicula(String titulo, String protagonista, String director, float precio) {
+        this.titulo = titulo;
+        this.protagonista = protagonista;
         this.director = director;
         this.precio = precio;
-        this.protagonista = protagonista;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String getProtagonista() {
+        return protagonista;
+    }
+
+    public void setProtagonista(String protagonista) {
+        this.protagonista = protagonista;
     }
 
     public String getDirector() {
@@ -29,28 +45,12 @@ public class Pelicula {
         this.precio = precio;
     }
 
-    public String getProtagonista() {
-        return protagonista;
-    }
-
-    public void setProtagonista(String protagonista) {
-        this.protagonista = protagonista;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     @Override
     public String toString() {
         return "Pelicula{" +
-                "director='" + director + '\'' +
-                ", titulo='" + titulo + '\'' +
+                "titulo='" + titulo + '\'' +
                 ", protagonista='" + protagonista + '\'' +
+                ", director='" + director + '\'' +
                 ", precio=" + precio +
                 '}';
     }

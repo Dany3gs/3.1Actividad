@@ -19,13 +19,12 @@ public class Main {
     public static void main(String[] args) {
 
         Libro[] libros = new Libro[2];
-        libros[0] = new Libro("Gabriel García Márquez", 10.53f, "Cien años de soledad");
-        libros[1] = new Libro("George Orwell", 21.23f, "1984");
+        libros[0] = new Libro("Gabriel García Márquez", "Cien años de soledad", 10.53f);
+        libros[1] = new Libro("George Orwell", "1984", 21.23f);
 
         Pelicula[] peliculas = new Pelicula[2];
-        peliculas[0]= new Pelicula("Francis Ford Coppola", 19.99f, "Francis Ford Coppola", "El Padrino");
-        peliculas[1]= new Pelicula("Quentin Tarantino", 15.49f, "John Travolta", "Pulp Fiction");
-
+        peliculas[0] = new Pelicula("El Padrino", "Marlon Brando", "Francis Ford Coppola", 19.99f);
+        peliculas[1]= new Pelicula("Pulp Fiction", "John Travolta", "Quentin Tarantino", 17.99f);
 
         for(Libro libro: libros) {
             System.out.println(libro);

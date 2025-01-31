@@ -16,4 +16,22 @@ precio, según corresponda.
 */
 
 public class Main {
+    public static void main(String[] args) {
+
+        Libro[] libros = new Libro[2];
+        libros[0] = new Libro("Gabriel García Márquez", 10.53f, "Cien años de soledad");
+        libros[1] = new Libro("George Orwell", 21.23f, "1984");
+
+        Pelicula[] peliculas = new Pelicula[2];
+        peliculas[0]= new Pelicula("Francis Ford Coppola", 19.99f, "Francis Ford Coppola", "El Padrino");
+        peliculas[1]= new Pelicula("Quentin Tarantino", 15.49f, "John Travolta", "Pulp Fiction");
+
+
+        for(Libro libro: libros) {
+            System.out.println(libro);
+        }
+        for(Pelicula pelicula: peliculas) {
+            System.out.println(pelicula);
+        }
+    }
 }

@@ -26,9 +26,12 @@ public class Main {
         peliculas[0] = new Pelicula("El Padrino", "Marlon Brando", "Francis Ford Coppola", 19.99f);
         peliculas[1]= new Pelicula("Pulp Fiction", "John Travolta", "Quentin Tarantino", 17.99f);
 
+        System.out.println("-------Libros-------");
         for(Libro libro: libros) {
             System.out.println(libro);
         }
+        System.out.println("");
+        System.out.println("-------Peliculas-------");
         for(Pelicula pelicula: peliculas) {
             System.out.println(pelicula);
         }

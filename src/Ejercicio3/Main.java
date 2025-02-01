@@ -12,11 +12,44 @@ p y false en caso contrario.
 
 De esta forma, las clases Libro y Película se tienen que redefinir como sigue:
 
--> Libro, cuyos atributos son autor de tipo Persona, título de tipo String y precio de tipo Float.
--> Película, con los atributos protagonista y director de tipo Persona, título de tipo String y precio de tipo Float.
+-> Libro, cuyos atributos son autor de "tipo Persona" (nos indica relación de composición), título de tipo String y
+   precio de tipo Float.
+
+-> Película, con los atributos protagonista y director de "tipo Persona" (nos indica relación de composición), título
+   de tipo String y precio de tipo Float.
 
 Implementa la clase Persona y la redefinición de las clases Libro y Película, considerando los atributos y métodos
 descritos. */
 
+/** En este ejercicio la relación que nos indica entre la clase Persona con Película y Libro es de "Composición", ya que
+ * Libro y Película no "son una" Persona, sino que "tiene" una Persona como autor, protagonista o director.
+ * */
+
 public class Main {
+    public static void main(String[] args) {
+        // Ejemplo de comprobación, no requerido en ejercicio
+
+        // Creamos una instancia de persona
+        Persona autor = new Persona("Gabriel", "García Marquez");
+        Persona protagonista = new Persona("Robert", "De Niro");
+        Persona director = new Persona("Christopher", "Nolan");
+
+        // Creamos una instancia de libro
+        Libro libro1 = new Libro(autor, "100Millas", 19.99f);
+        System.out.println("El libro 1 es:");
+        System.out.println(libro1.toString());
+
+        System.out.println("--------------------");
+
+        // Creamos una instancia de película
+        Pelicula pelicula1 = new Pelicula(protagonista, director, "Inception", 12.99f);
+        System.out.println("La pelicula 1 es:");
+        System.out.println(pelicula1.toString());
+
+        System.out.println("--------------------");
+
+        // Probar método esIgual
+        Persona otraPersona = new Persona("Daniel", "Martínez");
+        System.out.println("El autor de la película 1 es igual a otraPersona? " + autor.esIgual(otraPersona));
+    }
 }

@@ -32,4 +32,7 @@ Implementa las clases Persona, Libro y Catálogo, considerando los atributos, co
 */
 
 public class Main {
+	public static void main(String[] args) {
+	
+	}
 }

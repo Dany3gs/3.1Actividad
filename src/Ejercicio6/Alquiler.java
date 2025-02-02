@@ -2,11 +2,9 @@ package Ejercicio6;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.Temporal;
 
 public class Alquiler {
 	private Cliente cliente;
-	//private Cliente DNI;
 	private LocalDate fechaInicial;
 	private LocalDate fechaFinal;
 	private int posicionAmarre;
@@ -14,7 +12,6 @@ public class Alquiler {
 	
 	public Alquiler(Cliente cliente, LocalDate fechaInicial, LocalDate fechaFinal, int posicionAmarre, Barco barco) {
 		this.cliente = cliente;
-		//this.DNI = DNI;
 		this.fechaInicial = fechaInicial;
 		this.fechaFinal = fechaFinal;
 		this.posicionAmarre = posicionAmarre;
@@ -28,14 +25,6 @@ public class Alquiler {
 	public void setNombre(Cliente nombre) {
 		this.cliente = nombre;
 	}
-	
-		/*public Cliente getDNI() {
-			return DNI;
-		}
-		
-		public void setDNI(Cliente DNI) {
-			this.DNI = DNI;
-		}*/
 	
 	public LocalDate getFechaInicial() {
 		return fechaInicial;
@@ -84,7 +73,6 @@ public class Alquiler {
 	public String toString() {
 		return "Alquiler{" +
 				"nombre=" + cliente +
-				//", DNI=" + DNI +
 				", fechaInicial=" + fechaInicial +
 				", fechaFinal=" + fechaFinal +
 				", posicionAmarre=" + posicionAmarre +

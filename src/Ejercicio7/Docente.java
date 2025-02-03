@@ -33,7 +33,8 @@ public class Docente implements ServMedico{
 	public void setExperiencia(String experiencia) {
 		this.experiencia = experiencia;
 	}
-	
+
+	// Obligatorios si están en clase abstracta y esta clase hereda de ella
 	@Override
 	public void regProveedor() {
 	

@@ -25,7 +25,8 @@ public class Yate extends Barco{
 	public void setNumeroCamarotes(int numeroCamarotes) {
 		this.numeroCamarotes = numeroCamarotes;
 	}
-	
+
+	// Cálculo según indica enunciado Polimorfismo por heredar de clase Barco, se indica con super.
 	@Override
 	public double calcularModulo() {
 		return super.calcularModulo() + potenciaCV + numeroCamarotes;

@@ -22,7 +22,8 @@ class Alumno implements ServMedico{
 	public void setCarrera(String carrera) {
 		this.carrera = carrera;
 	}
-	
+
+	// Obligatorios si están en clase abstracta y esta clase hereda de ella
 	@Override
 	public void regProveedor() {
 		// Implementación del método

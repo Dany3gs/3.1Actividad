@@ -57,13 +57,16 @@ public class Alquiler {
 	public void setBarco(Barco barco) {
 		this.barco = barco;
 	}
-	
+
+	// Método para calcular alquiler
 	public double calcularAlquiler() {
+		// Se usa clase ChronoUnit,DAYS.between(inicio, fin) para calcular los días junto con LocalDate
 		long diasAlquilados = ChronoUnit.DAYS.between(fechaInicial, fechaFinal) + 1; // Incluye días inicial y final
 		double modulo = barco.calcularModulo();
 		return diasAlquilados * modulo * 300;
 	}
-	
+
+	// Método para mostrar el total de días que se alquiló la embarcación
 	public int diasAlquilados() {
 		long totalDiasAlquilados = ChronoUnit.DAYS.between(fechaInicial, fechaFinal) + 1;
 		return (int) totalDiasAlquilados;

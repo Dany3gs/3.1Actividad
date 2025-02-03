@@ -1,7 +1,5 @@
 package Ejercicio6;
 
-import java.util.Date;
-
 public class Velero extends Barco{
 	private int numeroMastiles;
 	
@@ -17,7 +15,8 @@ public class Velero extends Barco{
 	public void setNumeroMastiles(int numeroMastiles) {
 		this.numeroMastiles = numeroMastiles;
 	}
-	
+
+	// Cálculo según indica enunciado Polimorfismo por heredar de clase Barco, se indica con super.
 	@Override
 	public double calcularModulo(){
 		return super.calcularModulo() + numeroMastiles;

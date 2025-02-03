@@ -47,11 +47,11 @@ public class Pelicula {
 
     @Override
     public String toString() {
-        return "Pelicula{" +
-                "protagonista=" + protagonista +
-                ", director=" + director +
-                ", titulo='" + titulo + '\'' +
-                ", precio=" + precio +
+        return "Pelicula{ " +
+                "protagonista = " + getProtagonista() +
+                ", director = " + getDirector() +
+                ", titulo = '" + titulo + '\'' +
+                ", precio = " + precio +
                 '}';
     }
 }

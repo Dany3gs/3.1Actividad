@@ -15,6 +15,8 @@ public class Libro extends Producto{
 	public void setAutor(Persona4 autor) {
 		this.autor = autor;
 	}
+
+	// Obligado por tener el método en la clase abstracta (Polimorfismo)
 	@Override
 	public Persona4 getPersonaAsociada() {
 		return this.autor; // Implementar método abstracto

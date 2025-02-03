@@ -5,6 +5,7 @@ public class Racional {
 	private int denominador;
 	
 	public Racional(int numerador, int denominador) {
+		// Se limita denominador que no pueda ser 0, se aplica encapsulamiento
 		if (denominador == 0) {
 			throw new IllegalArgumentException("El denominador no puede ser cero");
 		}
@@ -36,7 +37,6 @@ public class Racional {
 	}
 	
 	public Racional restar(Racional otro) {
-		// Implementación de la resta
 		int nuevoNumerador = (this.numerador * otro.denominador) - (this.denominador * otro.numerador);
 		int nuevoDenominador = this.denominador * otro.denominador;
 		return new Racional(nuevoNumerador, nuevoDenominador);
@@ -45,7 +45,6 @@ public class Racional {
 	public Racional opuesto() {
 		// Por convención se debe mantener el denominador en positivo, se indica en método para hacer referencia a su
 		// valor en opuesto
-		
 		return new Racional(-this.numerador, -this.denominador);
 		
 		/*Otra forma de hacerlo

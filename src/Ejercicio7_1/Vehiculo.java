@@ -37,7 +37,8 @@ public class Vehiculo implements regVehicular {
 	public void setCveVehicular(Object cveVehicular) {
 		this.cveVehicular = cveVehicular;
 	}
-	
+
+	// Obligatorios si están en clase abstracta y esta clase hereda de ella
 	@Override
 	public double pagoTramite() {
 		return 0;

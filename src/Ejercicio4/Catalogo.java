@@ -51,15 +51,14 @@ public class Catalogo {
 		throw new NoSuchElementException("ID no encontrado: " + id);
 	}
 	
-	//--> buscar(String titulo), devuelve, contenidos en un Catálogo, a todos los Productos cuyo título es titulo.
-	public Catalogo buscar(String titulo) {
-		Catalogo resultados = new Catalogo(productos.length);
+	//--> buscar(String titulo), devuelve contenidos en un Catálogo, a todos los Productos cuyo título es titulo.
+	public String buscar(String titulo) {
 		for (int i = 0; i < cantidadDisponible; i++) {
 			if (productos[i].getTitulo().equalsIgnoreCase(titulo)) {
 				System.out.println(productos[i]);
 			}
 		}
-		return resultados;
+		return "";
 	}
 	
 	//--> buscar(Persona p), devuelve, contenidos en un Catálogo, a todos los Productos cuyo autor, director o protagonista,

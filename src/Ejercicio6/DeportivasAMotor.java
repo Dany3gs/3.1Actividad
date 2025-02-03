@@ -15,7 +15,8 @@ public class DeportivasAMotor extends Barco{
 	public void setPotenciaCV(int potenciaCV) {
 		this.potenciaCV = potenciaCV;
 	}
-	
+
+	// Cálculo según indica enunciado Polimorfismo por heredar de clase Barco, se indica con super.
 	@Override
 	public double calcularModulo(){
 		return super.calcularModulo() + potenciaCV;

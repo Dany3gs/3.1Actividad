@@ -26,10 +26,12 @@ public class Pelicula extends Producto{
 		this.director = director;
 	}
 
+	// Obligado por tener el método en la clase abstracta (Polimorfismo)
 	@Override
 	public Persona4 getPersonaAsociada() {
-		return this.director; // Implementar método abstracto
+		return this.director; // Implementado de método abstracto
 	}
+
 	@Override
 	public String toString() {
 		return "Pelicula{" +

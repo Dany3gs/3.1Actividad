@@ -32,6 +32,7 @@ public abstract class Producto {
 		return ID;
 	}
 
+	// Para poder implementar en cada clase Libro y Película de manera independiente, se crea método abstracto
 	public abstract Persona4 getPersonaAsociada();
 	
 	@Override

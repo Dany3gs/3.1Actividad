@@ -1,7 +1,5 @@
 package Ejercicio6;
 
-import java.util.Date;
-
 public class Barco {
 	private String matricula;
 	private double eslora;
@@ -36,7 +34,8 @@ public class Barco {
 	public void setAnoFabricacion(int anoFabricacion) {
 		this.anoFabricacion = anoFabricacion;
 	}
-	
+
+	// Cálculo según indica enunciado (Polimorfismo)
 	public double calcularModulo(){
 		return eslora * 10;
 	}

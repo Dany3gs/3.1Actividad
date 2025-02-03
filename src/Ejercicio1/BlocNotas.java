@@ -11,11 +11,11 @@ public class BlocNotas {
 
 	// Método constructor con parámetro capacidad, para darle un tamaño al array al instanciarlo
 	public BlocNotas(int capacidad) {
-		this.notas = new Nota[capacidad]; // Asignamos al atributo notas (array) el tamaño de "capacidad"
+		this.notas = new Nota[capacidad]; // Asignamos el tamaño del array con el parámetro "capacidad"
 	}
 
-	// Solicitamos como parámetro una nueva Nota, tenemos que comprobar si el tamaño del Array está lleno
-	// Utilizamos el atributo índice para esto
+	// Solicitamos como parámetro una nueva Nota, comprobamos si el tamaño del Array está lleno,
+	// utilizando el atributo índice para esto.
 	public void introducirNota(Nota nota) {
 		if (indice < notas.length) {
 			notas[indice] = nota; // Si hay hueco en el array, se coloca en el valor de índice la nueva nota
@@ -28,15 +28,9 @@ public class BlocNotas {
 
 	// Método para imprimir las notas por consola
 	public void listarNotas() {
-		// Con foreach
 		for (Nota nota: Arrays.copyOf(notas, indice)) {
 			System.out.println(nota);
 		}
-
-		// Con for //
-		/*for (int i = 0; i < indice; i++) {
-			System.out.println(notas[i]);
-		}*/
 	}
 
 	/* Método para eliminar una nota, pasamos como parámetro una posición del array que es la que queremos eliminar,
@@ -47,8 +41,6 @@ public class BlocNotas {
 	public void eliminarNota(int posicion) {
 		if (posicion >= 0 && posicion < indice) {
 			for (int i = posicion; i < indice - 1; i++) {
-
-				// Esta es la operación clave. Asigna a la posición actual (i) el valor de la siguiente posición (i + 1).
 				// Sobrescribiendo la posición que se desea eliminar.
 				notas[i] = notas[i + 1];
 			}

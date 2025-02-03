@@ -4,11 +4,14 @@ package Ejercicio5;
 resta, opuesto e inverso de un número racional a imitación de la suma o resta de los números reales o enteros.*/
 
 public class Main {
+
 	public static void main(String[] args) {
-		
+
+		// Creamos dos objetos
 		Racional a = new Racional(1,2);
 		Racional b = new Racional(2,3);
-		
+
+		//Sumamos y restamos racionales
 		Racional resultadoSuma = a.sumar(b);
 		Racional resultadoResta = a.restar(b);
 		

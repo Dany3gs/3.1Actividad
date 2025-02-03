@@ -40,12 +40,9 @@ public class Propietario {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+
+	// Indicado en diagrama UML
+	public void RegVehiculo(){}
 	
-	public void RegVehiculo(){
-	
-	}
-	
-	public void ModRegVehiculo(){
-	
-	}
+	public void ModRegVehiculo(){}
 }

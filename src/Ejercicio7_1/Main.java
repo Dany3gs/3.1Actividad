@@ -3,8 +3,10 @@ package Ejercicio7_1;
 import java.util.Date;
 
 public class Main {
+
 	public static void main(String[] args) {
-		
+
+		// Se instancian objetos tipo propietario y automovil y se inicializan
 		Propietario propietario = new Propietario();
 		propietario.setRfc("RFC123456");
 		propietario.setNombre("Juan Pérez");
@@ -19,10 +21,7 @@ public class Main {
 		automovil.setFecVerificacion(new Date());
 		
 		System.out.println("Propietario: " + propietario.getNombre() + ", RFC: " + propietario.getRfc());
-		System.out.println("Automóvil: " +
-				automovil.getMarca() +
-				" " + automovil.getModelo() +
-				", Dueño: " +
+		System.out.println("Automóvil: " + automovil.getMarca() + " " + automovil.getModelo() +	", Dueño: " +
 				automovil.getDuenio().getNombre());
 	}
 }

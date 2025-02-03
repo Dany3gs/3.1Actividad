@@ -25,6 +25,7 @@ public class Persona4 {
 		this.apellido = apellido;
 	}
 
+	// Se especifica que el método compruebe nombre y apellido
 	public boolean esIgual(Persona4 p) {
 		return nombre.equals(p.getNombre()) && apellido.equals(p.getApellido());
 	}

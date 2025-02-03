@@ -27,10 +27,9 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                '}';
+        return  "nombre = '" + nombre + '\'' +
+                ", apellido = '" + apellido + '\'' +
+                "";
     }
 
     public boolean esIgual(Persona p) {

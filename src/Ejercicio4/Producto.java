@@ -31,10 +31,8 @@ public abstract class Producto {
 	public int getID() {
 		return ID;
 	}
-	
-	public void setID(int ID) {
-		this.ID = ID;
-	}
+
+	public abstract Persona4 getPersonaAsociada();
 	
 	@Override
 	public String toString() {

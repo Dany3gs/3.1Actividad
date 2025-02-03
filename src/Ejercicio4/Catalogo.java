@@ -1,14 +1,15 @@
 package Ejercicio4;
 
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 public class Catalogo {
 	private Producto[] productos;
 	private int cantidadDisponible;
-	
-	public Catalogo(Producto[] productos, int cantidadDisponible) {
-		this.productos = productos;
-		this.cantidadDisponible = 0;
+
+	public Catalogo(int capacidadMaxima) {
+		productos = new Producto[capacidadMaxima];
+		cantidadDisponible = 0;
 	}
 	
 	public Producto[] getProductos() {
@@ -27,37 +28,50 @@ public class Catalogo {
 		this.cantidadDisponible = cantidadDisponible;
 	}
 	
-	//--> agregar(Producto p), agrega el Producto p al catálogo. //TODO: creo que ok
-	public void agregarProducto(Producto producto) {
+	//--> agregar(Producto p), agrega el Producto p al catálogo. Se maneja error si está lleno
+	public void agregar(Producto p) {
 		if (cantidadDisponible < productos.length) {
-			productos[cantidadDisponible] = producto;
-			cantidadDisponible++;
+			productos[cantidadDisponible++] = p;
+		} else {
+			throw new IllegalStateException("Catálogo lleno"); // Avisamos en error si está lleno el array
 		}
 	}
 	
 	//--> eliminar(Integer id), elimina el producto cuyo identificador único es id.
-	public void eliminarProducto(int id) {
-		// TODO pendiente ver como implementar
+	public void eliminar(Integer id) {
+		for (int i = 0; i < cantidadDisponible; i++) {
+			if (productos[i].getID() == id) {
+				// Se copia el array y se le asigna una posición menos
+				System.arraycopy(productos, i+1, productos, i, cantidadDisponible - i - 1);
+				productos[--cantidadDisponible] = null;
+				return;
+			}
+		}
+		// Se maneja error si no se encuentra
+		throw new NoSuchElementException("ID no encontrado: " + id);
 	}
 	
 	//--> buscar(String titulo), devuelve, contenidos en un Catálogo, a todos los Productos cuyo título es titulo.
-	//TODO: con esto bastaría? o hay que limitar más o duplicar array por si hay duplicados?
-	public String buscarTitulo(String titulo) {
-		if (titulo == null) {
-			return "Título no válido";
-		}
+	public Catalogo buscar(String titulo) {
+		Catalogo resultados = new Catalogo(productos.length);
 		for (int i = 0; i < cantidadDisponible; i++) {
-			if (titulo.equals(productos[i].getTitulo())) { //TODO: sería necesario "productos[i] != null &&" en el if?
-				return productos[i].getTitulo();
+			if (productos[i].getTitulo().equalsIgnoreCase(titulo)) {
+				System.out.println(productos[i]);
 			}
 		}
-	return "Titulo no encontrado";
+		return resultados;
 	}
 	
 	//--> buscar(Persona p), devuelve, contenidos en un Catálogo, a todos los Productos cuyo autor, director o protagonista,
 	//según sea el caso, es p.
-	public void buscarPersona(Persona p) {
-	
+	public Catalogo buscar(Persona4 p) {
+		Catalogo resultados = new Catalogo(productos.length);
+		for (int i = 0; i < cantidadDisponible; i++) {
+			if (productos[i].getPersonaAsociada().esIgual(p)) {
+				resultados.agregar(productos[i]);
+			}
+		}
+		return resultados;
 	}
 	
 	@Override

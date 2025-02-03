@@ -1,33 +1,35 @@
 package Ejercicio4;
 
-import Ejercicio3.Persona;
-
 public class Pelicula extends Producto{
-	private Ejercicio3.Persona protagonista;
-	private Persona director;
+	private Persona4 protagonista;
+	private Persona4 director;
 	
-	public Pelicula(String titulo, float precio, Persona protagonista, Persona director) {
+	public Pelicula(String titulo, float precio, Persona4 protagonista, Persona4 director) {
 		super(titulo, precio);
 		this.protagonista = protagonista;
 		this.director = director;
 	}
 	
-	public Persona getProtagonista() {
+	public Persona4 getProtagonista() {
 		return protagonista;
 	}
 	
-	public void setProtagonista(Persona protagonista) {
+	public void setProtagonista(Persona4 protagonista) {
 		this.protagonista = protagonista;
 	}
 	
-	public Persona getDirector() {
+	public Persona4 getDirector() {
 		return director;
 	}
 	
-	public void setDirector(Persona director) {
+	public void setDirector(Persona4 director) {
 		this.director = director;
 	}
-	
+
+	@Override
+	public Persona4 getPersonaAsociada() {
+		return this.director; // Implementar método abstracto
+	}
 	@Override
 	public String toString() {
 		return "Pelicula{" +

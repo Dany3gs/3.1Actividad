@@ -1,10 +1,10 @@
 package Ejercicio4;
 
-public class Persona {
+public class Persona4 {
 	private String nombre;
 	private String apellido;
 	
-	public Persona(String nombre, String apellido) {
+	public Persona4(String nombre, String apellido) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 	}
@@ -24,7 +24,11 @@ public class Persona {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	
+
+	public boolean esIgual(Persona4 p) {
+		return nombre.equals(p.getNombre()) && apellido.equals(p.getApellido());
+	}
+
 	@Override
 	public String toString() {
 		return "Persona{" +
@@ -32,4 +36,6 @@ public class Persona {
 				", apellido='" + apellido + '\'' +
 				'}';
 	}
+
+
 }

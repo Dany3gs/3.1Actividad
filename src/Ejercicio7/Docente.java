@@ -5,35 +5,29 @@ import java.util.Date;
 public class Docente implements ServMedico{
 	private String rfc;
 	private Date fecIngreso;
-	private String experiencia;
+	private CVitae experiencia;
 	
 	public Docente() {
 	}
 	
-	public String getRfc() {
-		return rfc;
+	public void getRfc() {
 	}
 	
 	public void setRfc(String rfc) {
 		this.rfc = rfc;
 	}
 	
-	public Date getFecIngreso() {
-		return fecIngreso;
+	public void getFecIngreso(){
 	}
 	
 	public void setFecIngreso(Date fecIngreso) {
 		this.fecIngreso = fecIngreso;
 	}
 	
-	public String getExperiencia() {
-		return experiencia;
-	}
-	
-	public void setExperiencia(String experiencia) {
+	public void setExperiencia(CVitae experiencia) {
 		this.experiencia = experiencia;
 	}
-
+	
 	// Obligatorios si están en clase abstracta y esta clase hereda de ella
 	@Override
 	public void regProveedor() {

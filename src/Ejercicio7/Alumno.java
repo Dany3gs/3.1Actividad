@@ -7,16 +7,14 @@ class Alumno implements ServMedico{
 	public Alumno() {
 	}
 	
-	public String getMatricula() {
-		return matricula;
+	public void getMatricula() {
 	}
 	
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
 	
-	public String getCarrera() {
-		return carrera;
+	public void getCarrera() {
 	}
 	
 	public void setCarrera(String carrera) {

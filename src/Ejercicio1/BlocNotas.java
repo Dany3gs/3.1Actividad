@@ -11,8 +11,13 @@ public class BlocNotas {
 
 	// Método constructor con parámetro capacidad, para darle un tamaño al array al instanciarlo
 	public BlocNotas(int capacidad) {
-		this.notas = new Nota[capacidad]; // Asignamos el tamaño del array con el parámetro "capacidad"
-	}
+		int valido = Integer.MIN_VALUE + 1;
+		if (capacidad <= 0 || capacidad < valido) {
+			System.out.println("La capacidad debe ser un número positivo mayor que cero.");
+		}
+		this.notas = new Nota[capacidad];
+	} // Asignamos el tamaño del array con el parámetro "capacidad"
+	
 
 	// Solicitamos como parámetro una nueva Nota, comprobamos si el tamaño del Array está lleno,
 	// utilizando el atributo índice para esto.
